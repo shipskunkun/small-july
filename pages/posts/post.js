@@ -1,5 +1,5 @@
-var postsData = require('../../data/posts-data.js');
-// import  {postList  as postsData}  from '../../data/posts-data.js'
+// var postsData = require('../../data/posts-data.js');
+import  {postList}  from '../../data/posts-data.js'
 
 
 Page({
@@ -10,11 +10,11 @@ Page({
   onLoad: function () {
 
 
-    console.log(postsData);
-    this.data.postList = postsData.postList
+    // console.log(postsData);
+    // this.data.postList = postsData.postList
     this.setData({
-        postList:postsData.postList
-        // postList: postsData
+        // postList:postsData.postList
+        postList: postList
     });
   },
 

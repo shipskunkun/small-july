@@ -5,6 +5,9 @@ Page({
         isPlayingMusic: false
     },
     onLoad: function (option) {
+
+        console.log("执行onLoad");
+
         var postId = option.id;
         this.data.currentPostId = postId;
         var postData = postsData.postList[postId];
@@ -87,7 +90,11 @@ Page({
         wx.getStorage({
             key: "posts_collected",
             success: function (res) {
+
+
                 var postsCollected = res.data;
+
+                console.log(postsCollected);
                 var postCollected = postsCollected[that.data.currentPostId];
                 // 收藏变成未收藏，未收藏变成收藏
                 postCollected = !postCollected;
